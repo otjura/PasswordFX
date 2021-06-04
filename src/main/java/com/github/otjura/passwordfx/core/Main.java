@@ -1,8 +1,10 @@
+/*
+ * Copyright Otso Rajala <ojrajala@gmail.com>, 2021
+ */
 package com.github.otjura.passwordfx.core;
 
 import javafx.application.Application;
 import javafx.scene.Scene;
-import javafx.scene.image.Image;
 import javafx.stage.Stage;
 import javafx.fxml.FXMLLoader;
 
