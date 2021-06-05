@@ -11,17 +11,26 @@ import javafx.scene.control.TextField;
 import java.net.URL;
 import java.util.ResourceBundle;
 
-import com.github.otjura.passwordfx.core.Logic;
+import org.apache.commons.lang3.RandomStringUtils;
 
 public class MainWindowController implements Initializable
 {
     @FXML
     private TextField resultField;
     @FXML
-    private Button generateButton;
+    private Button generateAlphanumericPasswordButton;
+    @FXML
+    private Button generateCharacterPasswordButton;
 
-    private void generatePassword() {
-        resultField.setText(Logic.randomAlphanumeric(20));
+    private void generateAlphanumericPassword()
+    {
+        resultField.setText(RandomStringUtils.randomAlphanumeric(20));
+        resultField.requestFocus();
+    }
+
+    private void generateCharacterPassword()
+    {
+        resultField.setText(RandomStringUtils.randomGraph(20));
         resultField.requestFocus();
     }
 
@@ -31,10 +40,11 @@ public class MainWindowController implements Initializable
         resultField.setEditable(false);
         resultField.setPromptText("Generated password appears here");
 
-        generateButton.setText("Generate password");
+        generateAlphanumericPasswordButton.setText("Generate alphanumeric password");
+        generateAlphanumericPasswordButton.setOnAction(e -> generateAlphanumericPassword());
 
-        generateButton.setOnAction(e -> {
-            generatePassword();
-        });
+        generateCharacterPasswordButton.setText("Generate password with special characters");
+        generateCharacterPasswordButton.setOnAction(e -> generateCharacterPassword());
+
     }
 }
