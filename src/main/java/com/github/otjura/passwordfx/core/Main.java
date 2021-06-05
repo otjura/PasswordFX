@@ -5,6 +5,7 @@ package com.github.otjura.passwordfx.core;
 
 import javafx.application.Application;
 import javafx.scene.Scene;
+import javafx.scene.image.*;
 import javafx.stage.Stage;
 import javafx.fxml.FXMLLoader;
 
@@ -30,7 +31,7 @@ public class Main extends Application
 
             // this arg just pops into existence from somewhere, dwi
             primaryStage.setTitle("PasswordFX");
-            //primaryStage.getIcons().add(new Image("icon.png"));
+            primaryStage.getIcons().add(new Image("icon.png"));
             primaryStage.setScene(scene);
             primaryStage.show();
         }
