@@ -40,10 +40,8 @@ public class MainWindowController implements Initializable
         resultField.setEditable(false);
         resultField.setPromptText("Generated password appears here");
 
-        generateAlphanumericPasswordButton.setText("Generate alphanumeric password");
         generateAlphanumericPasswordButton.setOnAction(e -> generateAlphanumericPassword());
 
-        generateCharacterPasswordButton.setText("Generate password with special characters");
         generateCharacterPasswordButton.setOnAction(e -> generateCharacterPassword());
 
     }

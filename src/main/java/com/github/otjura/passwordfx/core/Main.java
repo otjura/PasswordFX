@@ -5,7 +5,7 @@ package com.github.otjura.passwordfx.core;
 
 import javafx.application.Application;
 import javafx.scene.Scene;
-import javafx.scene.image.*;
+import javafx.scene.image.Image;
 import javafx.stage.Stage;
 import javafx.fxml.FXMLLoader;
 
@@ -29,7 +29,6 @@ public class Main extends Application
                     getClass().getClassLoader().getResource("MainWindow.fxml"))));
             scene.getStylesheets().add("style.css");
 
-            // this arg just pops into existence from somewhere, dwi
             primaryStage.setTitle("PasswordFX");
             primaryStage.getIcons().add(new Image("icon.png"));
             primaryStage.setScene(scene);
