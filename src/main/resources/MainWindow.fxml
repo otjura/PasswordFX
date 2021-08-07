@@ -7,9 +7,11 @@ Copyright Otso Rajala <ojrajala@gmail.com>, 2021
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
 
-<AnchorPane prefHeight="210.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.github.otjura.passwordfx.gui.MainWindowController">
-  <TextField fx:id="resultField" layoutX="33.0" layoutY="64.0" prefHeight="25.0" prefWidth="535.0" />
-  <Button fx:id="generateAlphanumericPasswordButton" alignment="CENTER" layoutX="33.0" layoutY="104.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="535.0" text="Generate password with special characters" />
-  <Button fx:id="generateCharacterPasswordButton" alignment="CENTER" layoutX="33.0" layoutY="147.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="535.0" text="Generate alphanumeric password" />
-  <Label layoutX="247.0" layoutY="27.0" text="Password Generator" />
-</AnchorPane>
+<VBox xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1"
+      fx:controller="com.github.otjura.passwordfx.gui.MainWindowController" alignment="CENTER"
+      prefWidth="500" prefHeight="200">
+  <Label fx:id="mainLabel" text="Password Generator"/>
+  <TextField fx:id="resultTextField" promptText="Generated password appears here"/>
+  <Button fx:id="alphanumButton" text="Generate a alphanumeric password"/>
+  <Button fx:id="anycharButton" text="Generate password with any characters"/>
+</VBox>

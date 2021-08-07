@@ -5,8 +5,7 @@ package com.github.otjura.passwordfx.gui;
 
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
-import javafx.scene.control.Button;
-import javafx.scene.control.TextField;
+import javafx.scene.control.*;
 
 import java.net.URL;
 import java.util.ResourceBundle;
@@ -16,33 +15,38 @@ import org.apache.commons.lang3.RandomStringUtils;
 public class MainWindowController implements Initializable
 {
     @FXML
-    private TextField resultField;
+    private Label mainLabel;
     @FXML
-    private Button generateAlphanumericPasswordButton;
+    private TextField resultTextField;
     @FXML
-    private Button generateCharacterPasswordButton;
+    private Button alphanumButton;
+    @FXML
+    private Button anycharButton;
+
+    private int passwordLength;
 
     private void generateAlphanumericPassword()
     {
-        resultField.setText(RandomStringUtils.randomGraph(20));
-        resultField.requestFocus();
+        resultTextField.setText(RandomStringUtils.randomAlphanumeric(passwordLength));
+        resultTextField.requestFocus();
     }
 
     private void generateCharacterPassword()
     {
-        resultField.setText(RandomStringUtils.randomAlphanumeric(20));
-        resultField.requestFocus();
+        resultTextField.setText(RandomStringUtils.randomGraph(passwordLength));
+        resultTextField.requestFocus();
     }
 
     @Override
     public void initialize(URL location, ResourceBundle resources)
     {
-        resultField.setEditable(false);
-        resultField.setPromptText("Generated password appears here");
+        passwordLength = 20;
 
-        generateAlphanumericPasswordButton.setOnAction(e -> generateAlphanumericPassword());
+        resultTextField.setEditable(false);
 
-        generateCharacterPasswordButton.setOnAction(e -> generateCharacterPassword());
+        alphanumButton.setOnAction(e -> generateAlphanumericPassword());
+
+        anycharButton.setOnAction(e -> generateCharacterPassword());
 
     }
 }
