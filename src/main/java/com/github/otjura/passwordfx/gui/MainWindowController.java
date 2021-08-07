@@ -24,13 +24,13 @@ public class MainWindowController implements Initializable
 
     private void generateAlphanumericPassword()
     {
-        resultField.setText(RandomStringUtils.randomAlphanumeric(20));
+        resultField.setText(RandomStringUtils.randomGraph(20));
         resultField.requestFocus();
     }
 
     private void generateCharacterPassword()
     {
-        resultField.setText(RandomStringUtils.randomGraph(20));
+        resultField.setText(RandomStringUtils.randomAlphanumeric(20));
         resultField.requestFocus();
     }
 
