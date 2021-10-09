@@ -1,18 +1,30 @@
 #mainLabel
 {
-  -fx-font-size: 1.6em;
+	-fx-font-size: 1.6em;
 }
 
 #resultTextField
 {
-  -fx-max-width: 200;
+	-fx-max-width: 380;
+	-fx-padding: 18;
+        -fx-border-insets: 10;
+        -fx-background-insets: 10;
 }
 
 Button
 {
-  -fx-pref-width: 300;
-  /* jfx has no margin so do https://stackoverflow.com/a/33141605 */
-  -fx-padding: 10;
-  -fx-border-insets: 5;
-  -fx-background-insets: 5;
+	-fx-pref-width: 300;
+	-fx-border-radius: 20;
+	-fx-border-color: #F5E8B3;
+	-fx-background-radius: 20;
+	-fx-background-color: #FFF;
+	/* jfx has no margin so do https://stackoverflow.com/a/33141605 */
+	-fx-padding: 10;
+	-fx-border-insets: 5;
+	-fx-background-insets: 5;
+}
+
+Button:hover
+{
+	-fx-background-color: #EEFFE6;
 }

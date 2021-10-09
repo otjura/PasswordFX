@@ -12,6 +12,6 @@ Copyright Otso Rajala <ojrajala@gmail.com>, 2021
       prefWidth="500" prefHeight="200">
   <Label fx:id="mainLabel" text="Password Generator"/>
   <TextField fx:id="resultTextField" promptText="Generated password appears here"/>
-  <Button fx:id="alphanumButton" text="Generate a alphanumeric password"/>
+  <Button fx:id="alphanumButton" text="Generate alphanumeric password"/>
   <Button fx:id="anycharButton" text="Generate password with any characters"/>
 </VBox>

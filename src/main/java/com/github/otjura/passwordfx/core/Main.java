@@ -32,6 +32,8 @@ public class Main extends Application
 			primaryStage.setTitle("PasswordFX");
 			primaryStage.getIcons().add(new Image("icon.png"));
 			primaryStage.setScene(scene);
+			primaryStage.setMinHeight(220);
+			primaryStage.setMinWidth(420);
 			primaryStage.show();
 		}
 		catch (NullPointerException | IOException e)
