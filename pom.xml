@@ -6,7 +6,7 @@
 
   <groupId>passwordfx</groupId>
   <artifactId>PasswordFX</artifactId>
-  <version>0.0.3</version>
+  <version>0.0.4</version>
   <packaging>jar</packaging>
 
   <name>PasswordFX</name>
@@ -14,8 +14,8 @@
 
   <properties>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-    <java.version>11</java.version>
-    <javafx.version>16</javafx.version>
+    <java.version>17</java.version>
+    <javafx.version>17.0.0.1</javafx.version>
     <maven.compiler.source>${java.version}</maven.compiler.source>
     <maven.compiler.target>${java.version}</maven.compiler.target>
   </properties>
